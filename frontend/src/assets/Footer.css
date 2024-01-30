@@ -1,0 +1,57 @@
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 3rem 0rem 3rem 0rem;
+    background-color: var(--primary);
+    display: flex;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+.footer-logo {
+    width: 60px;
+    height: auto;
+}
+.address {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: flex-start;
+}
+.footer-company {
+    font-size: 2rem;
+    color: white;
+    font-weight: 900;
+}
+.street {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 1rem;
+    color: white;
+}
+.street p {
+    line-height: 1.5rem;
+}
+.footer-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    color: white;
+}
+.icon1 {
+    font-size: 1.8rem;
+}
+.icon2 {
+    font-size: 1.7rem;
+}
+.icon1:hover {
+    color: rgb(255, 174, 24);
+    transform: scale(1.1);
+}
+.icon2:hover {
+    color: rgb(255, 174, 24);
+    transform: scale(1.1);
+}
+
