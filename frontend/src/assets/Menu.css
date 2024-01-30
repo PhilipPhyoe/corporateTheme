@@ -1,0 +1,20 @@
+.menu-bar {
+    display: flex;
+    column-gap: 1.3rem;
+    justify-content: center;
+    align-items: center;
+}
+.menu-item {
+    color: #d5d5d595;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+.menu-item:hover{
+    color: white;
+}
+.active {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-bottom: 4px solid rgb(255, 174, 24);
+}
