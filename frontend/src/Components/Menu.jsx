@@ -4,16 +4,28 @@ import "../assets/Menu.css";
 const Menu = () => {
   return (
     <div className="menu-bar">
-      <NavLink to="/" className="menu-item" activeClassName="active">
+      <NavLink
+        to="/"
+        className={(navData) => (navData.isActive ? "active" : "menu-item")}
+      >
         Home
       </NavLink>
-      <NavLink to="/about" className="menu-item" activeClassName="active">
+      <NavLink
+        to="/about"
+        className={(navData) => (navData.isActive ? "active" : "menu-item")}
+      >
         About Us
       </NavLink>
-      <NavLink to="/services" className="menu-item" activeClassName="active">
+      <NavLink
+        to="/services"
+        className={(navData) => (navData.isActive ? "active" : "menu-item")}
+      >
         Services
       </NavLink>
-      <NavLink to="/contact" className="menu-item" activeClassName="active">
+      <NavLink
+        to="/contact"
+        className={(navData) => (navData.isActive ? "active" : "menu-item")}
+      >
         Contact Us
       </NavLink>
     </div>
