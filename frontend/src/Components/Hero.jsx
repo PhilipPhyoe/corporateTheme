@@ -1,19 +1,20 @@
 import "../assets/Hero.css";
 import Button from "./Button";
 
-const Hero = () => {
+const Hero = ({ headline, pitch, follow, second, second2, image }) => {
   return (
     <div className="hero">
+      <img src={image} className="hero-img" />
       <div className="hero-content">
         <h1 className="hero-title">
-          Reliable <span style={{ color: "orange" }}>Corporate</span>
+          {headline} <span style={{ color: "orange" }}>{pitch}</span>
           <br />
-          Rental Services
+          {follow}
         </h1>
         <p className="hero-text">
-          Our corporate car rental services ensure
+          {second}
           <br />
-          safety, comfort and punctuality.
+          {second2}
         </p>
         <Button cta="Get Vehicles Now" />
       </div>
