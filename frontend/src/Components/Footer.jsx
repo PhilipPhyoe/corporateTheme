@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div>
-        <img src="/images/main logo.png" className="footer-logo" />
+        <img src="/images/text.png" className="footer-logo" />
       </div>
       <div className="address">
         <h2 className="footer-company">Hector Myanmar Group</h2>
