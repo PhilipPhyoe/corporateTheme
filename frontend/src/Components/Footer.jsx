@@ -5,6 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Info from "./Info";
 import "../assets/Footer.css";
+import Form from "./Form";
 
 const Footer = () => {
   return (
@@ -27,6 +28,7 @@ const Footer = () => {
         </div>
         <Info />
       </div>
+      <Form />
     </div>
   );
 };
