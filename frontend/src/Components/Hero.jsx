@@ -1,4 +1,5 @@
 import "../assets/Hero.css";
+import Button from "./Button";
 
 const Hero = () => {
   return (
@@ -14,6 +15,7 @@ const Hero = () => {
           <br />
           safety, comfort and punctuality.
         </p>
+        <Button cta="Get Vehicles Now" />
       </div>
     </div>
   );
