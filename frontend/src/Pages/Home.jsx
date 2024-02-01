@@ -1,5 +1,6 @@
 import Features from "../Components/Features";
 import Hero from "../Components/Hero";
+import Marketing from "../Components/Marketing";
 import Sales from "../Components/Sales";
 import {
   faCarOn,
@@ -34,6 +35,7 @@ const Home = () => {
         text3="We offer transportation and accomodation services for business
             travellers."
       />
+      <Marketing />
     </div>
   );
 };

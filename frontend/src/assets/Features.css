@@ -24,7 +24,7 @@
 .header-text {
     color: var(--primary);
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
 }
 .header-lower-third {
@@ -33,6 +33,7 @@
     font-weight: 400;
     text-align: center;
     color: var(--primary);
+    line-height: 2rem;
 }
 .feature-cards {
     margin-top: 2rem;
@@ -72,6 +73,7 @@
     color: var(--primary);
     font-weight: 400;
     font-size: 1rem;
+    line-height: 2rem;
 }
 .link1, .link2, .link3 {
     display: flex;
