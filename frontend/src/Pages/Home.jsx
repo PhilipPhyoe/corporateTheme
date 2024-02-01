@@ -35,7 +35,14 @@ const Home = () => {
         text3="We offer transportation and accomodation services for business
             travellers."
       />
-      <Marketing />
+      <Marketing
+        png="/images/homecar2.png"
+        title="Trusted Experience"
+        text="Our team has a wealth of experience in logistics, business travel, and
+          office routines. We use advanced technologies such as mobile tracking
+          system to keep our customers safe and secured. We always emphasize to
+          be on time and budget limitations."
+      />
     </div>
   );
 };
