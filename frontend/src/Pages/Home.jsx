@@ -1,6 +1,11 @@
+import Features from "../Components/Features";
 import Hero from "../Components/Hero";
 import Sales from "../Components/Sales";
-
+import {
+  faCarOn,
+  faScrewdriverWrench,
+  faSuitcase,
+} from "@fortawesome/free-solid-svg-icons";
 const Home = () => {
   return (
     <div>
@@ -13,6 +18,22 @@ const Home = () => {
         image="/images/hero1.jpg"
       />
       <Sales pitch="2300+ staff enjoy their daily routines with our car rental service." />
+      <Features
+        header="Nationwide Transportation"
+        lowerThird1="Hector Myanmar provides an integrated rental services to customers"
+        lowerThird2="across various industries and locations."
+        icon1={faCarOn}
+        icon2={faScrewdriverWrench}
+        icon3={faSuitcase}
+        card1="Office Rental"
+        card2="Vehicle Maintenance"
+        card3="Business Travel"
+        text1="We offer day-to-day rental operations in major cities for all staff."
+        text2="We offer scheduled repair and troubleshooting solutions for all
+            vehicles."
+        text3="We offer transportation and accomodation services for business
+            travellers."
+      />
     </div>
   );
 };
