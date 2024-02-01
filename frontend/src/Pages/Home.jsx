@@ -1,4 +1,5 @@
 import Hero from "../Components/Hero";
+import Sales from "../Components/Sales";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         second2="safety, comfort and punctuality."
         image="/images/hero1.jpg"
       />
+      <Sales pitch="2300+ staff enjoy their daily routines with our car rental service." />
     </div>
   );
 };
