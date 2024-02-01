@@ -73,10 +73,11 @@
     font-weight: 400;
     font-size: 1rem;
 }
-.link1 {
+.link1, .link2, .link3 {
     display: flex;
     align-items: center;
     column-gap: 0.6rem;
+    opacity: 0;
     transition: 0.5s ease-in-out;
 }
 .link-text {
@@ -89,9 +90,21 @@
     font-size: 1.1rem;
     color: var(--primary);
 }
-.card1:hover {
+.card-hover1:hover .card1 {
     transform: translateY(-20px);
 }
-.card1:hover + .link1{
+.card-hover1:hover .link1{
+    opacity: 1;
+}
+.card-hover2:hover .card2 {
+    transform: translateY(-20px);
+}
+.card-hover2:hover .link2{
+    opacity: 1;
+}
+.card-hover3:hover .card3 {
+    transform: translateY(-20px);
+}
+.card-hover3:hover .link3{
     opacity: 1;
 }
