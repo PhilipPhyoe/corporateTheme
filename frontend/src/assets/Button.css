@@ -7,9 +7,9 @@
     color: white;
     font-size: 1.2rem;
     font-weight: 900;
+    text-align: center;
 }
 .button:hover{
     transform: scale(1.1);
-    background-color: white;
-    color: orange;
+    background: linear-gradient(to right, #ff5d8f, #ff97b7);
 }

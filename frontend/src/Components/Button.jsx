@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import "../assets/Button.css";
 
-const Button = () => {
+const Button = ({ link, text }) => {
   return (
     <div>
-      <Link to="/contact">
-        <p className="button">Get Vehicles Now</p>
+      <Link to={link}>
+        <p className="button">{text}</p>
       </Link>
     </div>
   );

@@ -14,7 +14,8 @@
     line-height: 1.3rem;
     font-weight:900;
 }
-.facebook:hover {
+
+.info:hover .facebook {
     color: rgb(255, 174, 24);
     transform: scale(1.1);
 }

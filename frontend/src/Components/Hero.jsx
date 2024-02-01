@@ -16,7 +16,7 @@ const Hero = ({ headline, pitch, follow, second, second2, image }) => {
           <br />
           {second2}
         </p>
-        <Button cta="Get Vehicles Now" />
+        <Button text="Get Vehicles Now" link="/contact" />
       </div>
     </div>
   );

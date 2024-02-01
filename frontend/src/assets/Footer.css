@@ -54,4 +54,12 @@
     color: rgb(255, 174, 24);
     transform: scale(1.1);
 }
+.street:hover .icon1 {
+    color: rgb(255, 174, 24);
+    transform: scale(1.1);
+}
+.footer-email:hover .icon2 {
+    color: rgb(255, 174, 24);
+    transform: scale(1.1);
+}
 

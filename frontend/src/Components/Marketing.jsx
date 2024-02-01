@@ -31,7 +31,7 @@ const Marketing = () => {
           system to keep our customers safe and secured. We always emphasize to
           be on time and budget limitations.
         </p>
-        <Button />
+        <Button link="/services" text="Book Us Now" />
       </div>
     </div>
   );
