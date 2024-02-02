@@ -1,3 +1,5 @@
+import Counter from "../Components/Counter";
+import Counters from "../Components/Counters";
 import Features from "../Components/Features";
 import Hero from "../Components/Hero";
 import Marketing from "../Components/Marketing";
@@ -43,6 +45,7 @@ const Home = () => {
           system to keep our customers safe and secured. We always emphasize to
           be on time and budget limitations."
       />
+      <Counters />
     </div>
   );
 };
