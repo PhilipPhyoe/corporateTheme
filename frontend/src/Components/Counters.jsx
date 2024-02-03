@@ -5,7 +5,7 @@ import TitleBox from "./TitleBox";
 const Counters = () => {
   return (
     <div>
-      <div className="counter-title">
+      <div className="counters-title">
         <TitleBox text="MILESTONES" />
       </div>
       <div className="counters">
