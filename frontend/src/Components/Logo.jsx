@@ -1,8 +1,19 @@
 import { faSmog, faTruckMoving } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/Logo.css";
+import { useEffect, useState } from "react";
 
 const Logo = () => {
+  const [logoClass, setLogoClass] = useState("main-logo");
+  useEffect(() => {
+    window.onscroll = () => {
+      if (window.scrollY) {
+        setLogoClass("scroll-logo");
+      } else {
+        setLogoClass("main-logo");
+      }
+    };
+  }, []);
   return (
     <div className="logo">
       <div
@@ -15,7 +26,7 @@ const Logo = () => {
       <img
         src="/images/text.png"
         alt="Hector Myanmar - Car Rental"
-        className="main-logo"
+        className={logoClass}
       />
     </div>
   );
