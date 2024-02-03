@@ -5,4 +5,6 @@
     justify-content: space-around;
     align-items: center;
     background: linear-gradient(to right, #023e8a, #0077b6);
+    z-index: 99;
+    position: fixed;
 }
