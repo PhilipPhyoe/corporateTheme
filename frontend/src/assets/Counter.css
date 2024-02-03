@@ -6,7 +6,7 @@
     color: var(--primary);
 }
 .counter-text {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 900;
 }
 .highlight {
@@ -15,9 +15,9 @@
     justify-content: flex-start;
 }
 .counter-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .counter-title {
     font-size: 2rem;
-    font-weight: 300;
+    font-weight: 400;
 }
