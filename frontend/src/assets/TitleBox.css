@@ -1,0 +1,13 @@
+.title-box {
+    width: 100px;
+    height: auto;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    background-color: orange;
+    border-radius: 5px;
+}
+.title-text {
+    font-size: 0.8rem;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+}

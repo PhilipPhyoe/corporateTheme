@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../assets/Features.css";
 import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import TitleBox from "./TitleBox";
 const Features = ({
   header,
   lowerThird1,
@@ -18,9 +19,7 @@ const Features = ({
 }) => {
   return (
     <div className="features">
-      <div className="title-box">
-        <p className="title-text">SERVICES</p>
-      </div>
+      <TitleBox text="SERVICES" />
       <div className="feature-header">
         <h2 className="header-text">{header}</h2>
         <p className="header-lower-third">
