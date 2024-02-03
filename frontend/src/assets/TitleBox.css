@@ -4,10 +4,14 @@
     padding: 0.5rem 0rem 0.5rem 0rem;
     background-color: orange;
     border-radius: 5px;
+    transition: 0.5s ease-in;
 }
 .title-text {
     font-size: 0.8rem;
     color: white;
     text-align: center;
     font-weight: 900;
+}
+.title-box:hover {
+    transform: scale(1.1);
 }
