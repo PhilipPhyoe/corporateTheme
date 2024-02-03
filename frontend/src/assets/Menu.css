@@ -18,3 +18,37 @@
     font-weight: 900;
     border-bottom: 4px solid rgb(255, 174, 24);
 }
+.small-menu {
+    font-size: 2rem;
+    color: white;
+    display: none;
+}
+.mobile-menu {
+    display: none;
+}
+
+
+@media (max-width: 1000px) {
+    .small-menu {
+        display: block;
+    }
+    .menu-bar {
+        display: none;
+    }
+    .mobile-menu {
+        position: fixed;
+        top: 6rem;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        align-items: center;
+        background-color: var(--primary);
+        padding: 2rem 0 2rem 0;
+        transform: translateY(-50rem);
+    }
+    .show {
+        transform: translateY(0);
+    }
+}

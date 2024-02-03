@@ -56,3 +56,55 @@
     line-height: 2rem;
     margin-bottom: 3rem;
 }
+
+@media (max-width: 1500px) {
+    .message-title {
+        margin-top: 1rem;
+    }
+    .message-text{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+@media (max-width: 1000px){
+    .message-title {
+        font-size: 2rem;
+    }
+    .message-text{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 800px){
+    .marketing {
+        flex-direction: column;
+        height: auto;
+        row-gap: 1rem;
+        padding: 1rem;
+    }
+    .image, .message {
+        width: auto;
+    }
+}
+@media (max-width: 500px) {
+    .home-image {
+        width: 250px;
+    }
+    .img-icon1 {
+        font-size: 1rem;
+    }
+    .mark-icon1 {
+        transform: translate(20px,40px);
+    }
+    .mark-icon2 {
+        transform: translate(-120px,30px);
+    }
+    .mark-icon3 {
+        transform: translate(20px,-50px);
+    }
+    .mark-icon4 {
+        transform: translate(-50px,-20px);
+    }
+    .mark-icon5 {
+        transform: translate(110px,-25px);
+    }
+}

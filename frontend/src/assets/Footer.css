@@ -63,3 +63,31 @@
     transform: scale(1.1);
 }
 
+@media (max-width: 1000px) {
+    .footer-logo {
+        width: 40px;
+    }
+    .footer-company {
+        font-size: 1.5rem;
+    }
+    .street, .footer-email {
+        font-size: 0.9rem;
+    }
+    .icon1 {
+        font-size: 1.2rem;
+    }
+    .icon2 {
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 900px){
+    .footer {
+        flex-wrap: wrap;
+        row-gap: 1.3rem;
+    }
+}
+@media (max-width: 450px) {
+    .footer {
+        padding: 1rem;
+    }
+}

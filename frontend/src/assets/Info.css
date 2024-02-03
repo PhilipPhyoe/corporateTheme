@@ -19,3 +19,12 @@
     color: rgb(255, 174, 24);
     transform: scale(1.1);
 }
+
+@media (max-width: 1000px) {
+    .facebook {
+        font-size: 1.2rem;
+    }
+    .fa-address {
+        font-size: 0.8rem;
+    }
+}

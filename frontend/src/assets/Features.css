@@ -34,6 +34,7 @@
     height: auto;
     padding-left: 2rem;
     padding-right: 2rem;
+    flex-wrap: wrap;
 }
 .card1, .card2, .card3 {
     display: flex;
@@ -97,4 +98,38 @@
 }
 .card-hover3:hover .link3{
     opacity: 1;
+}
+@media (max-width: 1000px){
+    .header-text {
+        font-size: 2rem;
+    }
+    .header-lower-third {
+        font-size: 1rem;
+    }
+    .card-icon {
+        font-size: 1rem;
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+    .card-text {
+        font-size: 0.8rem;
+    }
+    .link-text {
+        font-size: 0.9rem;
+    }
+    .link-icon {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 900px) {
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 400px){
+    .card1, .card2, .card3 {
+        width: 200px;
+    }
 }

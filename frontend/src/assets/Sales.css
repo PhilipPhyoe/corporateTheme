@@ -23,3 +23,9 @@
 .logo-item:hover {
     transform: scale(1.1);
 }
+
+@media (max-width: 1400px) {
+    .client-logos {
+        flex-wrap: wrap;
+    }
+}

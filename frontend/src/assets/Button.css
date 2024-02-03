@@ -1,6 +1,5 @@
 .button {
-    width: 200px;
-    height: auto;
+    width: 15rem;
     padding: 1.2rem;
     background-color: orange;
     border-radius: 5px;
@@ -8,8 +7,22 @@
     font-size: 1.2rem;
     font-weight: 900;
     text-align: center;
+    margin-bottom: 1rem;
 }
 .button:hover{
     transform: scale(1.1);
     background: linear-gradient(to right, #ff5d8f, #ff97b7);
+}
+@media (max-width: 1000px){
+    .button {
+    width: 12rem;
+    font-size: 1rem;
+    }
+}
+@media (max-width: 800px) {
+    .button {
+        width: 9rem;
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
 }

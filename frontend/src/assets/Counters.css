@@ -10,3 +10,10 @@
     justify-content: space-between;
     padding: 3rem;
 }
+@media (max-width: 600px) {
+    .counters {
+        flex-direction: column;
+        row-gap: 1rem;
+        align-items: center;
+    }
+}

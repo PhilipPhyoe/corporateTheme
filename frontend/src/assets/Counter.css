@@ -13,3 +13,11 @@
     font-size: 2rem;
     font-weight: 400;
 }
+@media (max-width: 1000px){
+    .counter-text {
+        font-size: 2rem;
+    }
+    .counter-title {
+        font-size: 1rem;
+    }
+}

@@ -18,3 +18,8 @@
     z-index: 99;
     position: fixed;
 }
+@media (max-width: 600px) {
+    .social {
+        display: none;
+    }
+}

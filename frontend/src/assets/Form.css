@@ -40,6 +40,7 @@
     height: 30px;
     border: none;
     width: 100%;
+    padding-left: 1rem;
 }
 .form-btn {
     background-color: orange;
@@ -50,4 +51,22 @@
     border-radius: 5px;
     font-weight: 900;
     font-size: 1.2rem;
+}
+
+@media (max-width: 1000px){
+    .form {
+        padding: 1rem;
+    }
+    .form-title{
+        font-size: 1.4rem;
+    }
+    .form-text {
+        font-size: 1rem;
+    }
+    .contact-form {
+        font-size: 0.8rem;
+    }
+    .form-btn {
+        font-size: 1rem;
+    }
 }
