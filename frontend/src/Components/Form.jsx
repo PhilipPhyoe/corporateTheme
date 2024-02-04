@@ -9,10 +9,14 @@ const Form = () => {
   const [firstnameError, setFirstnameError] = useState(false);
   const [lastnameError, setLastnameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [phoneError, setPhoneError] = useState(false);
 
   const nameValidate = /^[a-zA-Z]{2,10}$/;
   const emailValidate =
-    /^([a-zA-Z0-9-.]{2,20})@([a-zA-Z0-9-]{2,20})\.([a-zA-Z]{2,6})\.([a-zA-Z]{2,5})?$/;
+    /^([a-zA-Z\d.-]+)@([a-zA-Z\d-]+)\.([a-zA-Z]{2,6})(\.[a-zA-Z]{2,5})?$/;
+
+  const phoneValidate = /^[\d]{7,9}$/;
+
   const validateFunction = (e) => {
     e.preventDefault();
     if (!nameValidate.test(firstname)) {
@@ -29,6 +33,11 @@ const Form = () => {
       setEmailError(true);
     } else {
       setEmailError(false);
+    }
+    if (!phoneValidate.test(phone)) {
+      setPhoneError(true);
+    } else {
+      setPhoneError(false);
     }
   };
 
@@ -83,7 +92,15 @@ const Form = () => {
         />
         {emailError && <p className="error-message">Invalid email.</p>}
         <label htmlFor="phone">Phone Number</label>
-        <input className="input" name="phone" type="text" />
+        <input
+          className="input"
+          name="phone"
+          type="text"
+          onChange={(e) => {
+            setPhone(e.target.value);
+          }}
+        />
+        {phoneError && <p className="error-message">Invalid phone number.</p>}
         <input
           className="form-btn"
           type="submit"
