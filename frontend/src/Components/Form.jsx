@@ -8,8 +8,11 @@ const Form = () => {
   const [phone, setPhone] = useState("");
   const [firstnameError, setFirstnameError] = useState(false);
   const [lastnameError, setLastnameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
 
   const nameValidate = /^[a-zA-Z]{2,10}$/;
+  const emailValidate =
+    /^([a-zA-Z0-9-.]{2,20})@([a-zA-Z0-9-]{2,20})\.([a-zA-Z]{2,6})\.([a-zA-Z]{2,5})?$/;
   const validateFunction = (e) => {
     e.preventDefault();
     if (!nameValidate.test(firstname)) {
@@ -21,6 +24,11 @@ const Form = () => {
       setLastnameError(true);
     } else {
       setLastnameError(false);
+    }
+    if (!emailValidate.test(email)) {
+      setEmailError(true);
+    } else {
+      setEmailError(false);
     }
   };
 
@@ -65,7 +73,15 @@ const Form = () => {
         </div>
 
         <label htmlFor="email">Email</label>
-        <input className="input" name="email" type="email" />
+        <input
+          className="input"
+          name="email"
+          type="email"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
+        {emailError && <p className="error-message">Invalid email.</p>}
         <label htmlFor="phone">Phone Number</label>
         <input className="input" name="phone" type="text" />
         <input
