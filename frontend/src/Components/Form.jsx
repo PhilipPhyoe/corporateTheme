@@ -7,6 +7,8 @@ const Form = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [firstnameError, setFirstnameError] = useState(false);
+  const [lastnameError, setLastnameError] = useState(false);
+
   const nameValidate = /^[a-zA-Z]{2,10}$/;
   const validateFunction = (e) => {
     e.preventDefault();
@@ -14,6 +16,11 @@ const Form = () => {
       setFirstnameError(true);
     } else {
       setFirstnameError(false);
+    }
+    if (!nameValidate.test(lastname)) {
+      setLastnameError(true);
+    } else {
+      setLastnameError(false);
     }
   };
 
@@ -41,7 +48,19 @@ const Form = () => {
           </div>
           <div className="lastname">
             <label htmlFor="lastname">Last Name</label>
-            <input className="input" name="lastname" type="text" />
+            <input
+              className="input"
+              name="lastname"
+              type="text"
+              onChange={(e) => {
+                setLastname(e.target.value);
+              }}
+            />
+            {lastnameError && (
+              <p className="error-message">
+                Be 2 to 10 characters long without numbers.
+              </p>
+            )}
           </div>
         </div>
 
