@@ -1,6 +1,22 @@
+import { useState } from "react";
 import "../assets/Form.css";
 
 const Form = () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [firstnameError, setFirstnameError] = useState(false);
+  const nameValidate = /^[a-zA-Z]{2,10}$/;
+  const validateFunction = (e) => {
+    e.preventDefault();
+    if (!nameValidate.test(firstname)) {
+      setFirstnameError(true);
+    } else {
+      setFirstnameError(false);
+    }
+  };
+
   return (
     <div className="form">
       <h2 className="form-title">Get a quote</h2>
@@ -9,7 +25,19 @@ const Form = () => {
         <div className="fullname">
           <div className="firstname">
             <label htmlFor="firstname">First Name</label>
-            <input className="input" name="firstname" type="text" />
+            <input
+              className="input"
+              name="firstname"
+              type="text"
+              onChange={(e) => {
+                setFirstname(e.target.value);
+              }}
+            />
+            {firstnameError && (
+              <p className="error-message">
+                Be 2 to 10 characters long without numbers.
+              </p>
+            )}
           </div>
           <div className="lastname">
             <label htmlFor="lastname">Last Name</label>
@@ -21,7 +49,12 @@ const Form = () => {
         <input className="input" name="email" type="email" />
         <label htmlFor="phone">Phone Number</label>
         <input className="input" name="phone" type="text" />
-        <input className="form-btn" type="submit" value="Submit Now" />
+        <input
+          className="form-btn"
+          type="submit"
+          value="Submit Now"
+          onClick={validateFunction}
+        />
       </form>
     </div>
   );

@@ -53,6 +53,11 @@
     font-size: 1.2rem;
 }
 
+.error-message {
+    font-size: 0.6rem;
+    color: red;
+}
+
 @media (max-width: 1000px){
     .form {
         padding: 1rem;
