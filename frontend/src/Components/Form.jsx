@@ -10,6 +10,7 @@ const Form = () => {
   const [lastnameError, setLastnameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
+  const [error, setError] = useState(false);
 
   const nameValidate = /^[a-zA-Z]{2,10}$/;
   const emailValidate =
@@ -19,25 +20,34 @@ const Form = () => {
 
   const validateFunction = (e) => {
     e.preventDefault();
-    if (!nameValidate.test(firstname)) {
-      setFirstnameError(true);
-    } else {
-      setFirstnameError(false);
-    }
-    if (!nameValidate.test(lastname)) {
-      setLastnameError(true);
-    } else {
-      setLastnameError(false);
-    }
-    if (!emailValidate.test(email)) {
-      setEmailError(true);
-    } else {
-      setEmailError(false);
-    }
-    if (!phoneValidate.test(phone)) {
-      setPhoneError(true);
-    } else {
-      setPhoneError(false);
+    if (!firstname || !lastname || !email || !phone) {
+      setError(true);
+    } else if (
+      !nameValidate.test(firstname) ||
+      !nameValidate.test(lastname) ||
+      !emailValidate.test(email) ||
+      !phoneValidate.test(phone)
+    ) {
+      if (!nameValidate.test(firstname)) {
+        setFirstnameError(true);
+      } else {
+        setFirstnameError(false);
+      }
+      if (!nameValidate.test(lastname)) {
+        setLastnameError(true);
+      } else {
+        setLastnameError(false);
+      }
+      if (!emailValidate.test(email)) {
+        setEmailError(true);
+      } else {
+        setEmailError(false);
+      }
+      if (!phoneValidate.test(phone)) {
+        setPhoneError(true);
+      } else {
+        setPhoneError(false);
+      }
     }
   };
 
@@ -92,21 +102,32 @@ const Form = () => {
         />
         {emailError && <p className="error-message">Invalid email.</p>}
         <label htmlFor="phone">Phone Number</label>
-        <input
-          className="input"
-          name="phone"
-          type="text"
-          onChange={(e) => {
-            setPhone(e.target.value);
-          }}
-        />
-        {phoneError && <p className="error-message">Invalid phone number.</p>}
+        <div className="phone-input">
+          <div className="phone-type">
+            <label>+959</label>
+          </div>
+          <div className="number">
+            <input
+              className="input"
+              name="phone"
+              type="text"
+              onChange={(e) => {
+                setPhone(e.target.value);
+              }}
+            />
+            {phoneError && (
+              <p className="error-message">Invalid phone number.</p>
+            )}
+          </div>
+        </div>
+
         <input
           className="form-btn"
           type="submit"
           value="Submit Now"
           onClick={validateFunction}
         />
+        {error && <p className="error-message">Please input all fields.</p>}
       </form>
     </div>
   );
