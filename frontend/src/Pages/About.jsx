@@ -5,6 +5,8 @@ import {
   faHandshake,
   faStreetView,
 } from "@fortawesome/free-solid-svg-icons";
+import Marketing from "../Components/Marketing";
+import Sales from "../Components/Sales";
 
 const About = () => {
   return (
@@ -31,6 +33,12 @@ const About = () => {
         text2="We never compromise quality for affordability and flexibility."
         text3="We follow rules and regulations to avoid frauds and corruptions."
       />
+      <Marketing
+        png="/images/bus.png"
+        title="Reliable Comfort"
+        text="We focus customer satisfaction while maintaing sustainable benefits for all stakeholders. We enhance travel experience of our customers bringing security, ease of use and flexibility. Safety is our first priority, emphasizing affordability as the same level."
+      />
+      <Sales pitch="Companies who trust our services." />
     </div>
   );
 };
