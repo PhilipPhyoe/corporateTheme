@@ -1,4 +1,3 @@
-import Counter from "../Components/Counter";
 import Counters from "../Components/Counters";
 import Features from "../Components/Features";
 import Hero from "../Components/Hero";
