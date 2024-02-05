@@ -45,7 +45,6 @@
 }
 .repair {
     width: 50%;
-    
     margin-left: 5rem;
 }
 .repair-title {
@@ -72,7 +71,33 @@
 .repair-img {
     width: 600px;
     height: auto;
-    object-fit: cover;
+}
+@media (max-width: 1000px){
+    .workshop {
+        padding: 2rem 1rem 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-item {
+        width: 90%;
+    }
+    .repair-photo {
+        padding: 0;
+        width: auto;
+    }
+    .repair{
+        margin: 0;
+        width: auto;
+    }
+}
+@media (max-width: 800px){
+    .workshop {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+    
+    .repair-img {
+        width: 500px;
+    }
 }
 @media (max-width: 600px) {
     .value-img {
@@ -81,9 +106,27 @@
     .value-added-title {
         font-size: 1.3rem;
     }
+    .workshop {
+        flex-wrap: wrap;
+    }
+    .service-item {
+        width: 80%;
+    }
+    .repair-img {
+        width: 400px;
+    }
 }
+@media (max-width: 500px){
+    .repair-img {
+        width: 300px;
+    }
+}
+
 @media (max-width: 400px) {
     .value-img {
+        width: 250px;
+    }
+    .repair-img {
         width: 250px;
     }
 }
