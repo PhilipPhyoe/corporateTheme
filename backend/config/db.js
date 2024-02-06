@@ -1,16 +1,19 @@
 import mysql from "mysql";
 import dotenv from "dotenv";
 
-dotenv.config();
+//dotenv.config();
 const connectDB = async () => {
   try {
-    mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASS,
-      database: process.env.DB_NAME,
+    var dataBase = mysql.createConnection({
+      host: "localhost",
+      user: "root",
+      password: "",
+      database: "hector",
     });
-    console.log("Database is connected.");
+    dataBase.connect((error) => {
+      if (error) throw error;
+      console.log("Database is connected.");
+    });
   } catch (error) {
     console.error(`Error message: ${error.message}`);
     process.exit(1);
