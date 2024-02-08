@@ -1,9 +1,8 @@
 import mysql from "mysql";
 import connectDB from "../config/db.js";
 
-connectDB();
 const getAllVisitors = async (req, res) => {
-  let visitors = "SELECT * FROM `inquiries`";
+  let visitors = "SELECT * FROM inquiries";
   try {
     visitors,
       (error, results, fields) => {
