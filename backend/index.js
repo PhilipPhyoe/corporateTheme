@@ -13,7 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 dotenv.config();
 
 const port = process.env.PORT || 5000;
-app.get("/", visitorRoutes);
+app.use("/", visitorRoutes);
+app.use("/api/visitors", visitorRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
