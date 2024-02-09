@@ -20,7 +20,7 @@ const connectDB = mysql.createPool({
   host: "localhost",
   user: "root",
   password: "",
-  database: "hector",
+  database: "hectornew",
 });
 
 export default connectDB;

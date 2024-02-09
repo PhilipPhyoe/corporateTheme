@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../assets/Form.css";
+import axios from "axios";
 
 const Form = () => {
   const [firstname, setFirstname] = useState("");
@@ -11,6 +12,7 @@ const Form = () => {
   const [emailError, setEmailError] = useState(false);
   const [phoneError, setPhoneError] = useState(false);
   const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const nameValidate = /^[a-zA-Z]{2,10}$/;
   const emailValidate =
@@ -48,6 +50,32 @@ const Form = () => {
       } else {
         setPhoneError(false);
       }
+    } else {
+      /*
+      fetch(url, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json;charset=UTF-8",
+        },
+        body: JSON.stringify(Data),
+      })
+        .then(setSuccess(true))
+        .then(console.log(Data));*/
+      axios
+        .post("http://localhost:5000/api/visitors", {
+          firstname: firstname,
+          lastname: lastname,
+          email: email,
+          phone: phone,
+        })
+        .then(setSuccess(true))
+        .then(() => {
+          setFirstname("");
+          setLastname("");
+          setEmail("");
+          setPhone("");
+        });
     }
   };
 
@@ -128,6 +156,11 @@ const Form = () => {
           onClick={validateFunction}
         />
         {error && <p className="error-message">Please input all fields.</p>}
+        {success && (
+          <p className="success-message">
+            Your data is sent successfully. We will contact you soon!
+          </p>
+        )}
       </form>
     </div>
   );
