@@ -1,0 +1,12 @@
+.error-page {
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+    text-align: center;
+}
+.error-title {
+    padding-top: 5rem;
+}
+.error-text {
+    padding: 3rem;
+}
