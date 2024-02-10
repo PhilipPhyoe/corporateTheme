@@ -20,7 +20,7 @@ const Form = () => {
 
   const phoneValidate = /^[\d]{7,9}$/;
 
-  const validateFunction = (e) => {
+  const validateFunction = async (e) => {
     e.preventDefault();
     if (!firstname || !lastname || !email || !phone) {
       setError(true);
@@ -52,18 +52,52 @@ const Form = () => {
       }
     } else {
       /*
-      fetch(url, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json;charset=UTF-8",
-        },
-        body: JSON.stringify(Data),
-      })
-        .then(setSuccess(true))
-        .then(console.log(Data));*/
-      axios
+      var url = "http://localhost/ContactFormControls/api.php";
+      var Data = {
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        phone: phone,
+      };
+      try {
+        await fetch(url, {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json;charset=UTF-8",
+          },
+          body: JSON.stringify(Data),
+        })
+          .then(setSuccess(true))
+          .then(() => {
+            setFirstname("");
+            setLastname("");
+            setEmail("");
+            setPhone("");
+          });
+      } catch (error) {
+        console.log(error);
+      }
+
+      
+      //nodejs axios
+        axios
         .post("http://localhost:5000/api/visitors", {
+          firstname: firstname,
+          lastname: lastname,
+          email: email,
+          phone: phone,
+        })
+        .then(setSuccess(true))
+        .then(() => {
+          setFirstname("");
+          setLastname("");
+          setEmail("");
+          setPhone("");
+        });
+      */
+      axios
+        .post("api.php", {
           firstname: firstname,
           lastname: lastname,
           email: email,
