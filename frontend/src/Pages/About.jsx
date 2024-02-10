@@ -32,6 +32,7 @@ const About = () => {
         text1="We provide salary plus benefits and training for local drivers."
         text2="We never compromise quality for affordability and flexibility."
         text3="We follow rules and regulations to avoid frauds and corruptions."
+        toLink="/services"
       />
       <Marketing
         png="/images/bus.png"

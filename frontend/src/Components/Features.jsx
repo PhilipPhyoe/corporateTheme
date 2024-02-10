@@ -16,6 +16,7 @@ const Features = ({
   text1,
   text2,
   text3,
+  toLink,
 }) => {
   return (
     <div className="features">
@@ -35,7 +36,7 @@ const Features = ({
             <h4 className="card-title">{card1}</h4>
             <p className="card-text">{text1}</p>
           </div>
-          <Link to="/services" className="link1">
+          <Link to={toLink} className="link1">
             <p className="link-text">Learn More</p>
             <FontAwesomeIcon icon={faArrowRight} className="link-icon" />
           </Link>
@@ -46,7 +47,7 @@ const Features = ({
             <h4 className="card-title">{card2}</h4>
             <p className="card-text">{text2}</p>
           </div>
-          <Link to="/services" className="link2">
+          <Link to={toLink} className="link2">
             <p className="link-text">Learn More</p>
             <FontAwesomeIcon icon={faArrowRight} className="link-icon" />
           </Link>
@@ -57,7 +58,7 @@ const Features = ({
             <h4 className="card-title">{card3}</h4>
             <p className="card-text">{text3}</p>
           </div>
-          <Link to="/services" className="link3">
+          <Link to={toLink} className="link3">
             <p className="link-text">Learn More</p>
             <FontAwesomeIcon icon={faArrowRight} className="link-icon" />
           </Link>

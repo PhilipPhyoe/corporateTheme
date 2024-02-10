@@ -35,6 +35,7 @@ const Home = () => {
             vehicles."
         text3="We offer transportation and accomodation services for business
             travellers."
+        toLink="/services"
       />
       <Marketing
         png="/images/homecar2.png"

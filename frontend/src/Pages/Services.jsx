@@ -1,3 +1,5 @@
+import { faBolt, faHeart, faUmbrella } from "@fortawesome/free-solid-svg-icons";
+import Features from "../Components/Features";
 import Hero from "../Components/Hero";
 import Sales from "../Components/Sales";
 import "../assets/Valueadded.css";
@@ -46,6 +48,21 @@ const Services = () => {
           </div>
         </div>
       </div>
+      <Features
+        header="Accountable Rental Services"
+        lowerThird1="We aim to serve with empathy and sympathy"
+        lowerThird2="to ensure safety and security for all passengers."
+        icon1={faHeart}
+        icon2={faBolt}
+        icon3={faUmbrella}
+        card1="Accountability"
+        card2="Agility"
+        card3="Flexibility"
+        text1="We take ownership for any problem within contract period."
+        text2="We move faster than our competitors in emergencies."
+        text3="We design scalable packages for all ranges of clients."
+        toLink="/contact"
+      />
       <Sales pitch="Companies who trust our services." />
     </div>
   );
