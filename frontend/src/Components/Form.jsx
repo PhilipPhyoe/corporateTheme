@@ -90,6 +90,7 @@ const Form = () => {
             <input
               className="input"
               name="firstname"
+              value={firstname}
               type="text"
               onChange={(e) => {
                 setFirstname(e.target.value);
@@ -107,6 +108,7 @@ const Form = () => {
               className="input"
               name="lastname"
               type="text"
+              value={lastname}
               onChange={(e) => {
                 setLastname(e.target.value);
               }}
@@ -123,6 +125,7 @@ const Form = () => {
         <input
           className="input"
           name="email"
+          value={email}
           type="email"
           onChange={(e) => {
             setEmail(e.target.value);
@@ -138,6 +141,7 @@ const Form = () => {
             <input
               className="input"
               name="phone"
+              value={phone}
               type="text"
               onChange={(e) => {
                 setPhone(e.target.value);
